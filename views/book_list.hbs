@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="5">Book List</th>
+        </tr>
+        <tr>
+            <th>Tiêu Đề</th>
+            <th>Tác Giả</th>
+            <th>Giá Tiền</th>
+            <th>Số Lượng</th>
+            <th>Ngày xuất bản</th>
+            <th>Ảnh sách</th>
+        </tr>
+        {{#each books}}
+        <tr>
+            <th>{{title}}</th>
+            <th>{{author}}</th>
+            <th>{{price}}</th>
+            <th>{{quantity}}</th>
+            <th>{{dateFormat date "DD/MM/YYYY"}}</th>
+            <th>
+                <img src="{{image}}" width="300" height="300">
+            </th>
+            <th>
+            </th>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+</html>
